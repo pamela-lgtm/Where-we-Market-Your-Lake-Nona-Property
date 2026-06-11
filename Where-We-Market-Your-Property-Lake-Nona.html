@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where We Market Your Property — Verandah Properties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#008C82;--teal-deep:#06605A;--gold:#D4AF50;--gold-soft:#E7D2A0;
+    --charcoal:#1A1A1A;--ink:#2A2A2A;--paper:#FBFAF6;--paper-2:#F3F0E7;
+    --line:#E2DDCF;--muted:#6E6A60;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62;font-size:16px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+
+  .masthead{background:radial-gradient(120% 130% at 85% -10%, rgba(212,175,80,.20), transparent 55%),linear-gradient(135deg, var(--charcoal) 0%, #11302E 58%, var(--teal-deep) 130%);color:#fff;padding:60px 0 52px;position:relative;overflow:hidden;}
+  .masthead::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--teal) 0%,var(--gold) 55%,var(--gold-soft) 100%);}
+  .brandline{font-family:'Jost',sans-serif;letter-spacing:.42em;text-transform:uppercase;font-size:11px;font-weight:400;color:var(--gold-soft);margin-bottom:24px;}
+  .eyebrow{font-family:'Jost',sans-serif;letter-spacing:.30em;text-transform:uppercase;font-size:11.5px;color:var(--gold);margin-bottom:14px;}
+  h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(34px,5.2vw,54px);line-height:1.04;letter-spacing:.004em;}
+  .sub-hd{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;color:#E8E5DC;margin-top:14px;font-style:italic;max-width:720px;}
+
+  section{padding:48px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:22px;}
+  .sec-num{font-family:'Jost',sans-serif;font-weight:500;font-size:13px;color:var(--teal);letter-spacing:.18em;border:1px solid var(--teal);border-radius:2px;padding:3px 9px;white-space:nowrap;}
+  h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(23px,3.4vw,32px);color:var(--charcoal);line-height:1.12;}
+  p{margin-bottom:14px;}
+  p.lead{font-size:18px;color:var(--ink);}
+  strong{font-weight:600;color:var(--charcoal);}
+
+  .numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:8px;}
+  .numbers .cell{background:#fff;padding:22px 18px;text-align:center;}
+  .numbers .big{font-family:'Playfair Display',serif;font-weight:700;font-size:32px;color:var(--teal-deep);line-height:1;}
+  .numbers .lab{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:10.5px;color:var(--muted);margin-top:8px;line-height:1.3;}
+
+  .portal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;}
+  .portal{background:#fff;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:0 0 9px 9px;padding:20px 20px;}
+  .portal .name{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:var(--charcoal);line-height:1.1;}
+  .portal .desc{font-size:13.5px;color:var(--muted);margin-top:5px;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .chip{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.02em;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--ink);}
+  .chip-cap{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:10.5px;color:var(--muted);margin:18px 0 10px;}
+
+  .feature{background:linear-gradient(150deg,#0d3d39,var(--teal-deep));color:#EAF6F4;border-radius:12px;padding:32px 34px;margin-top:8px;}
+  .feature .tag{font-family:'Jost',sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--gold-soft);}
+  .feature h3{font-family:'Playfair Display',serif;color:#fff;margin:6px 0 12px;font-size:26px;font-weight:600;}
+  .feature p{color:#E7F2F0;}
+  .feature p:last-child{margin-bottom:0;}
+  .feature .pkg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;}
+  .feature .pkg .it{background:rgba(255,255,255,.08);border:1px solid rgba(231,210,160,.3);border-radius:8px;padding:16px;text-align:center;}
+  .feature .pkg .it .ic{font-size:20px;color:var(--gold);}
+  .feature .pkg .it b{display:block;font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;margin-top:6px;}
+
+  .note{background:var(--paper-2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:24px 28px;margin-top:8px;}
+  .note h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:var(--teal-deep);margin-bottom:8px;}
+  .note p:last-child{margin-bottom:0;}
+
+  footer{background:var(--charcoal);color:#CFCBC0;padding:44px 0 36px;}
+  footer .f-brand{font-family:'Playfair Display',serif;color:#fff;font-size:24px;font-weight:600;}
+  footer .f-brand span{color:var(--gold);}
+  footer .f-tag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-soft);font-size:18px;margin-top:4px;}
+  footer .f-meta{margin-top:18px;font-size:13px;color:#9C9789;line-height:1.7;}
+  .disclaimer{font-size:11.5px;color:#807B70;margin-top:20px;border-top:1px solid #333;padding-top:16px;line-height:1.6;}
+  a{color:var(--teal);}
+
+  @media (max-width:780px){
+    .numbers{grid-template-columns:1fr;}
+    .portal-grid,.feature .pkg{grid-template-columns:1fr;}
+  }
+  @media print{
+    body{background:#fff;font-size:12px;}
+    .masthead{padding:38px 0 30px;}
+    section{padding:26px 0;}
+    .feature,.portal,.note{break-inside:avoid;}
+    a{color:var(--ink);text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brandline">Verandah Properties&nbsp;&nbsp;·&nbsp;&nbsp;Curating Lake Nona's Finest Rental Portfolio</div>
+    <div class="eyebrow">For Our Lake Nona Corridor Owners</div>
+    <h1>Where We Market Your Property</h1>
+    <div class="sub-hd">The moment your property is show-ready, we put it in front of the right resident — everywhere they're already looking.</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- reach -->
+  <section style="padding-top:42px;">
+    <p class="lead">We don't simply "post it online." From a single activation, your property is presented with professional photography, a floor plan, and an immersive virtual tour, then pushed across the country's largest rental networks, the MLS, and our own established platform — so qualified renters find it quickly, and you lease to exactly the right one.</p>
+    <div class="numbers">
+      <div class="cell"><div class="big">25+</div><div class="lab">Rental sites &amp; networks</div></div>
+      <div class="cell"><div class="big">24–48 hrs</div><div class="lab">From go-live to broad exposure</div></div>
+      <div class="cell"><div class="big">20+ yrs</div><div class="lab">Of Lake Nona market presence</div></div>
+    </div>
+  </section>
+
+  <!-- presentation -->
+  <section>
+    <div class="sec-head"><span class="sec-num">01 · Presented to Lease</span></div>
+    <h2>First, we make it look the way it deserves to</h2>
+    <p>Before a single site sees your property, we make sure it's presented to sell. Through our professional photographer, every Lake Nona Corridor rental is captured properly — so prospects experience the space fully before they ever step inside, and the most qualified renters self-select in.</p>
+    <div class="feature">
+      <div class="tag">Included for Lake Nona Corridor rentals</div>
+      <h3>The professional listing package</h3>
+      <p>Better presentation means more qualified inquiries and a faster lease. Every listing includes:</p>
+      <div class="pkg">
+        <div class="it"><div class="ic">✦</div><b>Professional photography</b></div>
+        <div class="it"><div class="ic">✦</div><b>A detailed floor plan</b></div>
+        <div class="it"><div class="ic">✦</div><b>An immersive virtual tour</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- marquee -->
+  <section>
+    <div class="sec-head"><span class="sec-num">02 · The Major Portals</span></div>
+    <h2>The high-traffic sites renters actually use</h2>
+    <p>Your property leads with the names that carry the overwhelming majority of qualified renter traffic nationwide:</p>
+    <div class="portal-grid">
+      <div class="portal"><div class="name">Zillow Rentals Network</div><div class="desc">Zillow · Trulia · HotPads — the largest rentals network by renter traffic.</div></div>
+      <div class="portal"><div class="name">Apartments.com</div><div class="desc">The flagship of the national CoStar rental network.</div></div>
+      <div class="portal"><div class="name">Realtor.com</div><div class="desc">One of the most-visited real-estate portals in the country.</div></div>
+      <div class="portal"><div class="name">Redfin</div><div class="desc">High-traffic search site with a serious, ready audience.</div></div>
+      <div class="portal"><div class="name">Zumper</div><div class="desc">A leading dedicated rental marketplace.</div></div>
+      <div class="portal"><div class="name">Apartment List</div><div class="desc">A matching-driven marketplace built for renters.</div></div>
+    </div>
+  </section>
+
+  <!-- full network -->
+  <section>
+    <div class="sec-head"><span class="sec-num">03 · The Full Network</span></div>
+    <h2>And dozens more across the national rental ecosystem</h2>
+    <p>Your listing also flows automatically to a deep network of additional marketplaces and aggregators, so no qualified renter slips through the cracks:</p>
+    <div class="chips">
+      <span class="chip">Dwellsy</span><span class="chip">Rental Beast</span><span class="chip">RentPath</span><span class="chip">Rentals.com</span><span class="chip">Apartment Guide</span><span class="chip">Rentable</span><span class="chip">PadMapper</span><span class="chip">Apartment Advisor</span><span class="chip">ApartmentLove</span><span class="chip">Showmetherent.com</span><span class="chip">EveryApartment</span><span class="chip">RentalSource</span><span class="chip">Rentler</span><span class="chip">CribWiz.com</span>
+    </div>
+  </section>
+
+  <!-- MLS -->
+  <section>
+    <div class="sec-head"><span class="sec-num">04 · The MLS</span></div>
+    <h2>The open door most owners never get to use</h2>
+    <div class="feature">
+      <div class="tag">A major advantage — at no extra cost to you</div>
+      <h3>We list your property in the MLS</h3>
+      <p>Beyond the consumer sites, we place your property in the MLS — the same system real-estate agents use every day. That opens your property to <strong style="color:#fff;">every agent in the market with a client looking to rent</strong>: a huge, often-overlooked source of qualified, agent-represented tenants.</p>
+      <p>To make agents eager to bring their clients, we pay the cooperating-broker (co-broke) referral fee from our side — and it's already included in your management package, at no additional cost to you.</p>
+    </div>
+  </section>
+
+  <!-- own site -->
+  <section>
+    <div class="sec-head"><span class="sec-num">05 · Our Own Platform</span></div>
+    <h2>And a living pipeline of demand that's all our own</h2>
+    <div class="note">
+      <h3>VerandahProperties.com — and our Lake Nona Rentals page</h3>
+      <p>Your property also lives on our own established website, where Verandah has held a solid footing in this market for more than twenty years. Our dedicated <strong>Lake Nona Rentals</strong> page draws renters searching specifically for this corridor — often the most motivated prospects of all.</p>
+      <p>And here's what sets it apart: when we don't currently have exactly what a renter is looking for, they can tell us through a quick request form. Because we onboard new properties all the time, the moment something fits their criteria, we reach right back out. It's a living, growing pipeline of pre-qualified renters waiting for the right property — yours could be the match.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">Verandah <span>Properties</span></div>
+    <div class="f-tag">The marriage, not the sprint.</div>
+    <div class="f-meta">White-glove property management for the Lake Nona &amp; Orlando corridor</div>
+    <div class="disclaimer">
+      Syndication partners and rental networks are current as of 2026 and are subject to change; specific site coverage can vary by property type, availability, and network requirements. Professional listing assets (photography, floor plan, virtual tour) are included for Lake Nona Corridor rentals as described in your management agreement.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
